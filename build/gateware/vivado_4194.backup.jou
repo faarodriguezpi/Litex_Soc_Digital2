@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Apr 11 17:34:53 2021
+# Process ID: 4194
+# Current directory: /home/alex/Digital2/Material_Laboratorio_Digital2/Litex_Soc_Digital2/build/gateware
+# Command line: vivado -mode batch -source top.tcl
+# Log file: /home/alex/Digital2/Material_Laboratorio_Digital2/Litex_Soc_Digital2/build/gateware/vivado.log
+# Journal file: /home/alex/Digital2/Material_Laboratorio_Digital2/Litex_Soc_Digital2/build/gateware/vivado.jou
+#-----------------------------------------------------------
+source top.tcl

@@ -39,3 +39,7 @@ set_property src_info {type:XDC file:1 line:77 export:INPUT save:INPUT read:READ
 set_property LOC R2 [get_ports {user_led14}]
 set_property src_info {type:XDC file:1 line:81 export:INPUT save:INPUT read:READ} [current_design]
 set_property LOC P2 [get_ports {user_led15}]
+set_property src_info {type:XDC file:1 line:85 export:INPUT save:INPUT read:READ} [current_design]
+set_property LOC H4 [get_ports {uart1_tx}]
+set_property src_info {type:XDC file:1 line:89 export:INPUT save:INPUT read:READ} [current_design]
+set_property LOC H1 [get_ports {uart1_rx}]

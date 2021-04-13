@@ -7,6 +7,14 @@
 #include <console.h>
 #include <generated/csr.h>
 
+/*
+ *     #include "file"
+ *  This form is used for header files of your own program. It searches for a file named 'file' in the directory containing the current file. You can prepend directories to this list with the -I option while compiling your source code.
+ *
+ */
+
+#include "uart1.h"
+
 static char *readstr(void)
 {
 	char c[2];
@@ -72,7 +80,7 @@ static void help(void)
 	puts("help                            - this command");
 	puts("reboot                          - reboot CPU");
 	puts("display                         - display test");
-	puts("led_prueba                             - led test");
+	puts("led_prueba                      - led test");
 }
 
 static void reboot(void)
@@ -107,8 +115,17 @@ static void ultrasonido(void)
     busy_wait(10);
     trigger_out_write(0);
     busy_wait(2);
-    if(
     
+}
+
+static void uart1_test(void)
+{
+	puts("\nSending a char through uart1 - \n");
+	//void uart1_write(char c);
+	puts("\n\tchar sent \n");
+	puts("\nReceiving a char through uart1 - \n");
+	//char uart1_read(void);
+	puts("\n\tchar read \n");
 }
 
 static void console_service(void)
@@ -127,6 +144,8 @@ static void console_service(void)
 		display_test();
 	else if(strcmp(token, "led") == 0)
 		led_test();
+	else if(strcmp(token, "uart1") == 0)
+		uart1_test();
 	prompt();
 }
 
@@ -137,8 +156,10 @@ int main(void)
 	irq_setie(1);
 #endif
 	uart_init();
+	
+	uart1_init();
 
-	puts("\nLab004 - CPU testing software built "__DATE__" "__TIME__"\n");
+	puts("\nLab Digital 2 - CPU testing software built "__DATE__" "__TIME__"\n");
 	help();
 	prompt();
 

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Sat Apr 10 17:28:46 2021
+| Date         : Sun Apr 11 20:15:38 2021
 | Host         : alex-Lenovo-IdeaPad-S145-14IIL running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_utilization -hierarchical -file top_utilization_hierarchical_synth.rpt
 | Design       : top
@@ -21,12 +21,12 @@ Table of Contents
 +----------------------------+------------------+------------+------------+---------+------+------+--------+--------+--------------+
 |          Instance          |      Module      | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP48 Blocks |
 +----------------------------+------------------+------------+------------+---------+------+------+--------+--------+--------------+
-| top                        |            (top) |       2280 |       2264 |      16 |    0 | 1769 |     15 |      8 |            4 |
-|   (top)                    |            (top) |        254 |        238 |      16 |    0 |  532 |     14 |      0 |            0 |
-|   VexRiscv                 |         VexRiscv |       2026 |       2026 |       0 |    0 | 1237 |      1 |      8 |            4 |
-|     (VexRiscv)             |         VexRiscv |        881 |        881 |       0 |    0 | 1013 |      0 |      2 |            4 |
-|     IBusCachedPlugin_cache | InstructionCache |        600 |        600 |       0 |    0 |  103 |      1 |      1 |            0 |
-|     dataCache_1_           |        DataCache |        545 |        545 |       0 |    0 |  121 |      0 |      5 |            0 |
+| top                        |            (top) |       2428 |       2396 |      32 |    0 | 1925 |     15 |      8 |            4 |
+|   (top)                    |            (top) |        349 |        317 |      32 |    0 |  687 |     14 |      0 |            0 |
+|   VexRiscv                 |         VexRiscv |       2079 |       2079 |       0 |    0 | 1238 |      1 |      8 |            4 |
+|     (VexRiscv)             |         VexRiscv |        887 |        887 |       0 |    0 | 1014 |      0 |      2 |            4 |
+|     IBusCachedPlugin_cache | InstructionCache |        659 |        659 |       0 |    0 |  103 |      1 |      1 |            0 |
+|     dataCache_1_           |        DataCache |        533 |        533 |       0 |    0 |  121 |      0 |      5 |            0 |
 +----------------------------+------------------+------------+------------+---------+------+------+--------+--------+--------------+
 
 

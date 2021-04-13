@@ -6,7 +6,7 @@
 <Project Version="7" Minor="40" Path="/home/alex/Digital2/Material_Laboratorio_Digital2/Litex_Soc_Digital2/build/gateware/top.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="a6ff1173a3e349c0b6964af4a7652cd0"/>
+    <Option Name="Id" Val="980d28ddcf274224a29eb891e04eb245"/>
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>

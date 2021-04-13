@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Sat Apr 10 17:29:31 2021
+| Date         : Sun Apr 11 20:16:15 2021
 | Host         : alex-Lenovo-IdeaPad-S145-14IIL running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_drc -file top_drc.rpt
 | Design       : top

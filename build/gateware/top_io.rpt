@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date                      : Sat Apr 10 17:29:01 2021
+| Date                      : Sun Apr 11 20:15:51 2021
 | Host                      : alex-Lenovo-IdeaPad-S145-14IIL running 64-bit Ubuntu 18.04.5 LTS
 | Command                   : report_io -file top_io.rpt
 | Design                    : top
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            20 |
+|            22 |
 +---------------+
 
 
@@ -161,10 +161,10 @@ Table of Contents
 | G16        |             | High Range | IO_L13N_T2_MRCC_15           | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | G17        |             | High Range | IO_L18N_T2_A23_15            | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | G18        |             | High Range | IO_L22P_T3_A17_15            | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| H1         |             | High Range | IO_L17P_T2_35                | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| H1         | uart1_rx    | High Range | IO_L17P_T2_35                | INPUT       | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | H2         |             | High Range | IO_L15P_T2_DQS_35            | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | H3         |             |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
-| H4         |             | High Range | IO_L21N_T3_DQS_35            | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| H4         | uart1_tx    | High Range | IO_L21N_T3_DQS_35            | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | H5         |             | High Range | IO_L24N_T3_35                | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | H6         |             | High Range | IO_L24P_T3_35                | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | H7         |             |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |

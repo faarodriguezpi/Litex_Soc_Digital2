@@ -25,6 +25,7 @@ from litedram.phy import s7ddrphy
 
 from liteeth.phy.rmii import LiteEthPHYRMII
 
+from litex.soc.cores import uart
 
 # BaseSoC ------------------------------------------------------------------------------------------
 
@@ -49,6 +50,28 @@ class BaseSoC(SoCCore):
             pads         = platform.request_all("user_led"),
             sys_clk_freq = sys_clk_freq)
         self.add_csr("leds")
+        
+        # Uart Adicional
+        #  Classical UART. En /litex/soc/integration/soc.py
+
+        self.submodules.uart1_phy = uart.UARTPHY(
+            pads     = platform.request("uart1"),
+            clk_freq = self.sys_clk_freq,
+            baudrate = 9600) # crea un objeto uart RS232PHY. Este despues se pasa a UART
+        self.submodules.uart1 = ResetInserter()(uart.UART(self.uart1_phy, #paso a UART. ResetInserter no idea
+            tx_fifo_depth = 16,
+            rx_fifo_depth = 16) )
+            
+        self.csr.add("uart1_phy", use_loc_if_exists=True)
+        self.csr.add("uart1", use_loc_if_exists=True)
+        
+        if hasattr(self.cpu, "interrupt"):
+            self.irq.add("uart1", use_loc_if_exists=True)
+        else:
+            self.add_constant("UART_POLLING")
+        
+        
+        
 
 # Build --------------------------------------------------------------------------------------------
 

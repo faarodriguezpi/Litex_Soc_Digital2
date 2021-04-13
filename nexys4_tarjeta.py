@@ -67,6 +67,14 @@ _io = [
         IOStandard("LVCMOS33"),
     ),
     
+    # serial 1 (uart1)
+    
+    ("uart1", 0,
+        Subsignal("tx", Pins("H4")),# uart_txd_out - RsTx 
+        Subsignal("rx", Pins("H1")),# uart_txd_in - RsRx
+        IOStandard("LVCMOS33"),
+    ),
+    
     ("adxl362_spi", 0, #Accelerometer
         Subsignal("cs_n", Pins("C15")),
         Subsignal("clk", Pins("D15")),

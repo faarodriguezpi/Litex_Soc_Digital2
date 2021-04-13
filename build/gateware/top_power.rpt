@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date             : Sat Apr 10 17:29:33 2021
+| Date             : Sun Apr 11 20:16:17 2021
 | Host             : alex-Lenovo-IdeaPad-S145-14IIL running 64-bit Ubuntu 18.04.5 LTS
 | Command          : report_power -file top_power.rpt
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.166        |
+| Total On-Chip Power (W)  | 0.171        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.068        |
+| Dynamic (W)              | 0.073        |
 | Device Static (W)        | 0.098        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.2         |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.008 |        3 |       --- |             --- |
-| Slice Logic              |     0.008 |     4526 |       --- |             --- |
-|   LUT as Logic           |     0.007 |     2231 |     63400 |            3.52 |
-|   CARRY4                 |    <0.001 |      137 |     15850 |            0.86 |
-|   Register               |    <0.001 |     1769 |    126800 |            1.40 |
-|   LUT as Distributed RAM |    <0.001 |       16 |     19000 |            0.08 |
+| Slice Logic              |     0.009 |     4891 |       --- |             --- |
+|   LUT as Logic           |     0.008 |     2358 |     63400 |            3.72 |
+|   CARRY4                 |    <0.001 |      153 |     15850 |            0.97 |
+|   Register               |    <0.001 |     1925 |    126800 |            1.52 |
+|   LUT as Distributed RAM |    <0.001 |       32 |     19000 |            0.17 |
 |   Others                 |     0.000 |       10 |       --- |             --- |
-| Signals                  |     0.011 |     3987 |       --- |             --- |
-| Block RAM                |     0.037 |       19 |       135 |           14.07 |
+| Signals                  |     0.013 |     4242 |       --- |             --- |
+| Block RAM                |     0.038 |       19 |       135 |           14.07 |
 | DSPs                     |     0.004 |        4 |       240 |            1.67 |
-| I/O                      |    <0.001 |       20 |       210 |            9.52 |
+| I/O                      |    <0.001 |       22 |       210 |           10.48 |
 | Static Power             |     0.098 |          |           |                 |
-| Total                    |     0.166 |          |           |                 |
+| Total                    |     0.171 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.081 |       0.065 |      0.016 |
+| Vccint    |       1.000 |     0.086 |       0.070 |      0.016 |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -143,9 +143,9 @@ Table of Contents
 +----------------------------+-----------+
 | Name                       | Power (W) |
 +----------------------------+-----------+
-| top                        |     0.068 |
-|   VexRiscv                 |     0.035 |
-|     IBusCachedPlugin_cache |     0.006 |
+| top                        |     0.073 |
+|   VexRiscv                 |     0.039 |
+|     IBusCachedPlugin_cache |     0.009 |
 |     dataCache_1_           |     0.007 |
 +----------------------------+-----------+
 

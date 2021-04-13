@@ -81,6 +81,14 @@ set_property IOSTANDARD LVCMOS33 [get_ports {user_led14}]
 set_property LOC P2 [get_ports {user_led15}]
 set_property IOSTANDARD LVCMOS33 [get_ports {user_led15}]
 
+# uart1:0.tx
+set_property LOC H4 [get_ports {uart1_tx}]
+set_property IOSTANDARD LVCMOS33 [get_ports {uart1_tx}]
+
+# uart1:0.rx
+set_property LOC H1 [get_ports {uart1_rx}]
+set_property IOSTANDARD LVCMOS33 [get_ports {uart1_rx}]
+
 ################################################################################
 # Design constraints
 ################################################################################
