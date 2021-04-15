@@ -1,10 +1,10 @@
 # Litex SoC Digital 2
 
-Foobar is a Python library for dealing with word pluralization.
+SoC basado en Litex.
 
 ## Descripción
 
-Ejemplo de SoC para Digital 2, donde se van agragando algunas funcionalidades y segmentos de código de distintos periféricos.
+Ejemplo de SoC para Digital 2, donde se van agregando algunas funcionalidades y segmentos de código de distintos periféricos.
 
 
 

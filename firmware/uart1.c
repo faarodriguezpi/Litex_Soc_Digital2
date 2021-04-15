@@ -1,6 +1,7 @@
 #include "uart1.h"
 #include <irq.h>
 #include <generated/csr.h>
+#include <console.h>
 
 #ifdef CSR_UART1_BASE
 
@@ -9,7 +10,7 @@
  * with logical AND.
  */
 
-//#define UART_POLLING
+#define UART1_POLLING //Se habilitó este define para que corran las funciones que se encuentran más abajo, luego del #else
 
 #ifndef UART1_POLLING
 
@@ -57,7 +58,7 @@ void uart1_isr(void)
 char uart1_read(void)
 {
 	char c;
-
+    puts("esta funcion");
 	if(irq_getie()) {
 		while(rx_consume == rx_produce);
 	} else if (rx_consume == rx_produce) {
@@ -75,7 +76,7 @@ int uart1_read_nonblock(void)
 }
 
 void uart1_write(char c)
-{
+{   
 	unsigned int oldmask;
 	unsigned int tx_produce_next = (tx_produce + 1) & UART1_RINGBUFFER_MASK_TX;
 
@@ -116,7 +117,7 @@ void uart1_sync(void)
 
 #else
 
-void uart_isr(void)
+void uart1_isr(void)
 {
 }
 

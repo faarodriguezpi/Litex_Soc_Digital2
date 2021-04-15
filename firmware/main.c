@@ -80,7 +80,8 @@ static void help(void)
 	puts("help                            - this command");
 	puts("reboot                          - reboot CPU");
 	puts("display                         - display test");
-	puts("led_prueba                      - led test");
+	puts("led                             - led test");
+	puts("uart1                           - uart1 test");
 }
 
 static void reboot(void)
@@ -88,7 +89,7 @@ static void reboot(void)
 	ctrl_reset_write(1);
 }
 
-static void display_test(void)
+/*static void display_test(void)
 {
 	int i;
 	printf("display_test...\n");
@@ -116,16 +117,29 @@ static void ultrasonido(void)
     trigger_out_write(0);
     busy_wait(2);
     
-}
+}*/
+
+
 
 static void uart1_test(void)
-{
-	puts("\nSending a char through uart1 - \n");
-	//void uart1_write(char c);
-	puts("\n\tchar sent \n");
-	puts("\nReceiving a char through uart1 - \n");
-	//char uart1_read(void);
-	puts("\n\tchar read \n");
+{   
+    uint8_t count = 0;
+    for (int w = 0; w < 200; w++){
+        char c = 'j';
+	    printf("\nSending a char '%c' through uart1 - \n", c);
+	    uart1_write(c);
+	    puts("\n\tchar sent \n");
+	    for(int i = 0; i < 10000; i++) {
+	        if(i == 9999) {
+	            puts("----------------------------------------------------------------\n");
+	        }
+	    }
+	    puts("\nReceiving a char through uart1 - \n");
+	    c = uart1_read();//uart1_read_nonblock();//uart1_read();
+	    printf("\n\tchar read: %c \n", c);
+	    count += 1;
+	    printf("Conteo: %d", count);
+	}
 }
 
 static void console_service(void)
@@ -141,9 +155,9 @@ static void console_service(void)
 	else if(strcmp(token, "reboot") == 0)
 		reboot();
 	else if(strcmp(token, "display") == 0)
-		display_test();
+		puts("\nDisplay - \n");//display_test();
 	else if(strcmp(token, "led") == 0)
-		led_test();
+		puts("\nLEDSsss\n");//led_test();
 	else if(strcmp(token, "uart1") == 0)
 		uart1_test();
 	prompt();
@@ -159,7 +173,7 @@ int main(void)
 	
 	uart1_init();
 
-	puts("\nLab Digital 2 - CPU testing software built "__DATE__" "__TIME__"\n");
+	puts("\n\t\t Lab Digital 2 \n\t - CPU testing software built "__DATE__" "__TIME__"\n");
 	help();
 	prompt();
 

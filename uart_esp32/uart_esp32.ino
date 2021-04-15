@@ -12,6 +12,8 @@
 #define RXD2 16
 #define TXD2 17
 
+char data = 'h';
+
 void setup() {
   // Note the format for setting a serial port is as follows: Serial2.begin(baud-rate, protocol, RX pin, TX pin);
   Serial.begin(115200);
@@ -22,7 +24,20 @@ void setup() {
 }
 
 void loop() { //Choose Serial1 or Serial2 as required
-  while (Serial2.available()) {
-    Serial.print(char(Serial2.read()));
-  }
+  //while (Serial2.available()) {
+    //Serial.print(char(Serial2.read()));
+
+    //if(Serial2.available()){
+     Serial2.write(data);
+     Serial.println("\ndata sent");  
+    //}
+
+    delay(500);
+    if(Serial2.available()){
+     Serial.print(char(Serial2.read()));  
+    }
+
+// Loopback serial test esp32 in https://icircuit.net/arduino-esp32-hardware-serial2-example/3181
+       
+  //}
 }
